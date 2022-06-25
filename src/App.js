@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Questions from "./pages/Questions";
 import FinalScreen from "./pages/FinalScreen";
@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Container maxWidth="sm">
         <Box textAlign="center" mt={5}>
-          <Switch>
+          <Routes>
             <Route path="/" exact>
               <Typography variant="h2" fontWeight="bold">
                 Quiz App
@@ -24,7 +24,7 @@ function App() {
             <Route path="/score">
               <FinalScreen />
             </Route>
-          </Switch>
+          </Routes>
         </Box>
       </Container>
     </Router>
